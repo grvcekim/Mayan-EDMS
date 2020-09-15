@@ -26,7 +26,7 @@ services:
       # MAYAN_APT_INSTALLS: "tesseract-ocr-deu tesseract-ocr-nld"
       # To add Python libraries, like LDAP, put then in the variable below.
       # MAYAN_PIP_INSTALLS: "python-ldap"
-    image: mayanedms/mayanedms:3
+    image: mayanedms/mayanedms:3.4.17
     networks:
       - bridge
     ports:
@@ -34,6 +34,8 @@ services:
     restart: unless-stopped
     volumes:
       - ${MAYAN_APP_VOLUME:-app}:/var/lib/mayan
+      - /Users/gracekim/Desktop/17-313/hw1/Mayan-EDMS/mayan/apps/dashboards/templates/dashboards:/opt/mayan-edms/lib/python3.7/site-packages/mayan/apps/dashboards/templates/dashboards
+      - /Users/gracekim/Desktop/17-313/hw1/Mayan-EDMS/mayan/apps/appearance/static/appearance/css:/opt/mayan-edms/static/appearance/css
       # Optional volumes to access external data like staging or watch folders
       # - /opt/staging_files:/staging_files
       # - /opt/watch_folder:/watch_folder
