@@ -1,3 +1,8 @@
+.btn-default, .btn-default:hover, .btn-default:active, .btn-default:visited {
+    background-color: navy;
+    outline-color: navy;
+}
+
 @font-face {
     font-family: 'IM Fell English SC';
     font-style: normal;
